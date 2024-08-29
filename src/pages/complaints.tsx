@@ -1,11 +1,6 @@
-interface Complaint {
-    id: number;
-    description: string;
-    status: 'pending' | 'resolved' | 'rejected';
-  }
-
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Complaint } from '../types/Complaint';
 
 const Complaints = () => {
   const [complaints, setComplaints] = useState<Complaint[]>([]);
